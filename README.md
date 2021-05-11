@@ -1,5 +1,5 @@
 <p align="center" style="text-align:center">
-    <img src="https://www.flaticon.com/svg/vstatic/svg/4351/4351197.svg?token=exp=1620738933~hmac=e9814f4497818fbdd3d6a47acc9fdfc0" alt="drawing" width="100"/>
+    <img src="https://www.flaticon.com/svg/vstatic/svg/4206/4206286.svg?token=exp=1620740582~hmac=bcaa6502019b7c3556a3d73100fd7127" alt="drawing" width="100"/>
 </p>
 
 
