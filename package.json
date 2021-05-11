@@ -1,0 +1,20 @@
+{
+  "name": "date-helper-js",
+  "version": "1.0.0",
+  "description": "Helper functions for working with date",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webster6667/date-helper-js.git"
+  },
+  "keywords": [],
+  "author": "webster6667",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webster6667/date-helper-js/issues"
+  },
+  "homepage": "https://github.com/webster6667/date-helper-js#readme"
+}
