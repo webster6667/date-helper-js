@@ -6,6 +6,27 @@
 # date-helper-js
 Helper functions for working with date
 
+## Install
+
+```
+npm i date-helper-js
+```
+
+## Use
+```javascript
+import {
+    getFirstDateOfMonth,
+    getLastDateOfMonth,
+    getMonthNameByMonthIndex,
+    getNextMonth,
+    getPrevMonth,
+    getDayOfWeekNumber,
+    getDateNumber,
+    getMonthDateByDateNumber,
+    isDatesEqual
+} from 'date-helper-js'
+```
+
 * **getMonthNameByMonthIndex**`(monthIndex: number, monthNames: string[] = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']):string`
 * **getDayOfWeekNumber**`(date: Date): number`
 * **getDateNumber**`(date: Date): number`
@@ -15,3 +36,8 @@ Helper functions for working with date
 * **getFirstDateOfMonth**`(date: Date):Date`
 * **getLastDateOfMonth**`(date: Date):Date`
 * **isDatesEqual**`(firstDate: Date, secondDate: Date, shouldCompareTime = false):boolean`
+
+
+## Author
+
+webster6667
