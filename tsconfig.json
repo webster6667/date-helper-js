@@ -1,32 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./",
+    "outDir": "./dist",
+
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": "./"
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js"
 
-  ],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+
+    "sourceMap": true,
+
+    "jsx": "react",
+    "allowJs": true, //Проходится по js файлам
+
+    "strict": true, //Строгий режим
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"],
   "exclude": [
-    "node_modules"
-  ],
-  "jsdoc": "jsdoc/out"
+    "node_modules/",
+    "lib",
+    "es",
+    "**/*.test.*"
+  ]
 }
