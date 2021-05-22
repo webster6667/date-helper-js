@@ -9,7 +9,7 @@ import external from 'rollup-plugin-peer-deps-external'
 import { terser } from 'rollup-plugin-terser'
 
 const moduleFormat = process.env.NODE_ENV,
-      shouldSqueeze = ['cjs'].includes(moduleFormat),
+      shouldSqueeze = ['cjs','umd'].includes(moduleFormat),
       isUMD = moduleFormat === 'umd'
 
 

@@ -1,5 +1,5 @@
 <p align="center" style="text-align:center">
-    <img src="./ilustration.svg" alt="ilustration" width="100"/>
+    <img src="./illustration.svg.svg" alt="ilustration" width="100"/>
 </p>
 
 # date-helper-js
@@ -53,13 +53,13 @@ Download and install with `script`.
 Recommended for learning purposes, you can use the latest version:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/date-helper-js/dist/lib/date-helper-js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/date-helper-js/dist/lib/date-helper.js"></script>
 ```
 
 Recommended for production for avoiding unexpected breakage from newer versions:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/date-helper-js@1.0.0/dist/lib/date-helper-js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/date-helper-js@1.0.2/dist/lib/date-helper.js"></script>
 ```
 
 ### Initialization
@@ -88,6 +88,8 @@ getMonthNameByMonthIndex(1)
 
 Exports a global variable called `dateHelper`. Use it like this
 
+Connect to html file ```<script src="https://cdn.jsdelivr.net/npm/date-helper-js/dist/lib/date-helper.js" ></script>```
+
 ```html
 <script>
     dateHelper.getMonthNameByMonthIndex(1);
@@ -98,8 +100,11 @@ Exports a global variable called `dateHelper`. Use it like this
 
 date-helper-js as an AMD module. Use with Require.js, System.js, and so on.
 
+1. <a href="https://cdn.jsdelivr.net/npm/date-helper-js/dist/lib/date-helper.js" target="_blank">Download lib</a>
+2. Connect to your module loader
+
 ```js
-requirejs(['date-helper-js'], function(dateHelper) {
+requirejs(['date-helper'], function(dateHelper) {
     dateHelper.getMonthNameByMonthIndex(1)
 });
 ```
