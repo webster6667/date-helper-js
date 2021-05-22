@@ -6,8 +6,8 @@
 
 > functions for working with date
 
-[![npm version](https://badge.fury.io/js/MYLIBNAME.svg)](https://www.npmjs.com/package/MYLIBNAME)
-[![](https://data.jsdelivr.com/v1/package/npm/MYLIBNAME/badge)](https://www.jsdelivr.com/package/npm/MYLIBNAME)
+[![npm version](https://badge.fury.io/js/date-helper-js.svg)](https://www.npmjs.com/package/date-helper-js)
+[![](https://data.jsdelivr.com/v1/package/npm/date-helper-js/badge)](https://www.jsdelivr.com/package/npm/date-helper-js)
 
 
 ## Table of Contents
