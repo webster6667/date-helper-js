@@ -1,5 +1,5 @@
 <p align="center" style="text-align:center">
-    <img src="./illustration.svg.svg" alt="ilustration" width="100"/>
+    <img src="./illustration.svg" alt="ilustration" width="100"/>
 </p>
 
 # date-helper-js
