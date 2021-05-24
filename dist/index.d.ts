@@ -55,6 +55,18 @@ declare const getDayOfMonthNumber: (date: Date) => number;
 declare const getDateByDayOfMonthNumber: (monthDate: Date, dayOfMontNumber: number) => Date;
 /**
  * @description
+ * Return next month Date of selected date
+ *
+ * @param {Date} date
+ * @returns {Date}
+ *
+ * @example
+ * getNextMonth(new Date("2017-01-26"))
+ * // => new Date("2017-02-26")
+ */
+declare const getNextMonth: (date: Date) => Date;
+/**
+ * @description
  * Return prev month Date of selected date
  *
  * @param {Date} date
@@ -109,4 +121,4 @@ declare const getLastDateOfMonth: (date: Date) => Date;
  * // => false
  */
 declare const isDatesEqual: (firstDate: Date, secondDate: Date, shouldCompareTime?: boolean) => boolean;
-export { getMonthNameByMonthIndex, getDayOfWeekNumber, getDayOfMonthNumber, getDateByDayOfMonthNumber, getPrevMonth, getFirstDateOfMonth, getLastDateOfMonth, isDatesEqual };
+export { getMonthNameByMonthIndex, getDayOfWeekNumber, getDayOfMonthNumber, getDateByDayOfMonthNumber, getNextMonth, getPrevMonth, getFirstDateOfMonth, getLastDateOfMonth, isDatesEqual };

@@ -173,6 +173,7 @@ export {
     getDayOfWeekNumber,
     getDayOfMonthNumber,
     getDateByDayOfMonthNumber,
+    getNextMonth,
     getPrevMonth,
     getFirstDateOfMonth,
     getLastDateOfMonth,

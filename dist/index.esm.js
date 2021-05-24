@@ -175,4 +175,4 @@ var isDatesEqual = function isDatesEqual(firstDate, secondDate) {
   return isEqual;
 };
 
-export { getDateByDayOfMonthNumber, getDayOfMonthNumber, getDayOfWeekNumber, getFirstDateOfMonth, getLastDateOfMonth, getMonthNameByMonthIndex, getPrevMonth, isDatesEqual };
+export { getDateByDayOfMonthNumber, getDayOfMonthNumber, getDayOfWeekNumber, getFirstDateOfMonth, getLastDateOfMonth, getMonthNameByMonthIndex, getNextMonth, getPrevMonth, isDatesEqual };

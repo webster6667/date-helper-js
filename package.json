@@ -1,6 +1,6 @@
 {
   "name": "date-helper-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Helper functions for working with date",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
