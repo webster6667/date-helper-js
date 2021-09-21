@@ -63,7 +63,7 @@ var getDayOfMonthNumber = function getDayOfMonthNumber(date) {
  * @description
  * Return Date by day of month number for selected date
  *
- * @param {Date} date
+ * @param {Date} monthDate
  * @param {Date} dayOfMontNumber
  * @returns {Date}
  *
@@ -81,34 +81,88 @@ var getDateByDayOfMonthNumber = function getDateByDayOfMonthNumber(monthDate, da
  * @description
  * Return next month Date of selected date
  *
- * @param {Date} date
+ * @param {Date} date - start date
+ * @param {number} step - how many steps forward
  * @returns {Date}
  *
  * @example
  * getNextMonth(new Date("2017-01-26"))
  * // => new Date("2017-02-26")
+ *
+ * getNextMonth(new Date("2017-01-26"), 2)
+ * // => new Date("2017-03-26")
  */
 
 
 var getNextMonth = function getNextMonth(date) {
-  var nextMonth = new Date(date).setMonth(date.getMonth() + 1);
+  var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var nextMonth = new Date(date).setMonth(date.getMonth() + step);
   return new Date(nextMonth);
 };
 /**
  * @description
  * Return prev month Date of selected date
  *
- * @param {Date} date
+ * @param {Date} date - start date
+ * @param {number} step - how many steps back
  * @returns {Date}
  *
  * @example
  * getPrevMonth(new Date("2017-02-26"))
  * // => new Date("2017-01-26")
+ *
+ * getPrevMonth(new Date("2017-03-26"), 2)
+ * // => new Date("2017-01-26")
  */
 
 
 var getPrevMonth = function getPrevMonth(date) {
-  var prevMonth = new Date(date).setMonth(date.getMonth() - 1);
+  var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var prevMonth = new Date(date).setMonth(date.getMonth() - step);
+  return new Date(prevMonth);
+};
+/**
+ * @description
+ * Return next day Date of selected date
+ *
+ * @param {Date} date - start date
+ * @param {number} step - how many steps forward
+ * @returns {Date}
+ *
+ * @example
+ * getNextDay(new Date("2017-01-26"))
+ * // => new Date("2017-02-27")
+ *
+ * getNextDay(new Date("2017-01-26"), 2)
+ * // => new Date("2017-03-28")
+ */
+
+
+var getNextDay = function getNextDay(date) {
+  var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var nextMonth = new Date(date).setDate(date.getDate() + step);
+  return new Date(nextMonth);
+};
+/**
+ * @description
+ * Return prev day Date of selected date
+ *
+ * @param {Date} date - start date
+ * @param {number} step - how many steps back
+ * @returns {Date}
+ *
+ * @example
+ * getPrevDay(new Date("2017-02-26"))
+ * // => new Date("2017-01-25")
+ *
+ * getPrevDay(new Date("2017-03-26"), 2)
+ * // => new Date("2017-01-24")
+ */
+
+
+var getPrevDay = function getPrevDay(date) {
+  var step = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var prevMonth = new Date(date).setDate(date.getDate() - step);
   return new Date(prevMonth);
 };
 /**
@@ -175,4 +229,4 @@ var isDatesEqual = function isDatesEqual(firstDate, secondDate) {
   return isEqual;
 };
 
-export { getDateByDayOfMonthNumber, getDayOfMonthNumber, getDayOfWeekNumber, getFirstDateOfMonth, getLastDateOfMonth, getMonthNameByMonthIndex, getNextMonth, getPrevMonth, isDatesEqual };
+export { getDateByDayOfMonthNumber, getDayOfMonthNumber, getDayOfWeekNumber, getFirstDateOfMonth, getLastDateOfMonth, getMonthNameByMonthIndex, getNextDay, getNextMonth, getPrevDay, getPrevMonth, isDatesEqual };

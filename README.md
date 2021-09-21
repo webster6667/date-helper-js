@@ -22,6 +22,8 @@
   - [getDateByDayOfMonthNumber](#getDateByDayOfMonthNumber)
   - [getNextMonth](#getNextMonth)
   - [getPrevMonth](#getPrevMonth)
+  - [getNextDay](#getNextDay)
+  - [getPrevDay](#getPrevDay)
   - [getFirstDateOfMonth](#getFirstDateOfMonth)
   - [getLastDateOfMonth](#getLastDateOfMonth)
   - [isDatesEqual](#isDatesEqual)
@@ -183,7 +185,7 @@ Return Date by day of month number for selected date
 
 
 #### Params
-- `date`
+- `monthDate`
   - Type: `Date`
   
 - `dayOfMontNumber`
@@ -208,7 +210,10 @@ Return next month Date of selected date
 #### Params
 - `date`
   - Type: `Date`
-  
+  - Description: start date
+- `step`
+  - Type: `number`
+  - Description: how many steps forward
 
 #### Returns
 - `Date`
@@ -217,6 +222,9 @@ Return next month Date of selected date
 ```JS
 getNextMonth(new Date("2017-01-26"))
 // => new Date("2017-02-26")
+
+getNextMonth(new Date("2017-01-26"), 2)
+// => new Date("2017-03-26")
 ```
 
 
@@ -228,7 +236,10 @@ Return prev month Date of selected date
 #### Params
 - `date`
   - Type: `Date`
-  
+  - Description: start date
+- `step`
+  - Type: `number`
+  - Description: how many steps back
 
 #### Returns
 - `Date`
@@ -237,6 +248,61 @@ Return prev month Date of selected date
 ```JS
 getPrevMonth(new Date("2017-02-26"))
 // => new Date("2017-01-26")
+
+getPrevMonth(new Date("2017-03-26"), 2)
+// => new Date("2017-01-26")
+```
+
+
+### getNextDay
+
+Return next day Date of selected date
+
+
+#### Params
+- `date`
+  - Type: `Date`
+  - Description: start date
+- `step`
+  - Type: `number`
+  - Description: how many steps forward
+
+#### Returns
+- `Date`
+
+#### Example
+```JS
+getNextDay(new Date("2017-01-26"))
+// => new Date("2017-02-27")
+
+getNextDay(new Date("2017-01-26"), 2)
+// => new Date("2017-03-28")
+```
+
+
+### getPrevDay
+
+Return prev day Date of selected date
+
+
+#### Params
+- `date`
+  - Type: `Date`
+  - Description: start date
+- `step`
+  - Type: `number`
+  - Description: how many steps back
+
+#### Returns
+- `Date`
+
+#### Example
+```JS
+getPrevDay(new Date("2017-02-26"))
+// => new Date("2017-01-25")
+
+getPrevDay(new Date("2017-03-26"), 2)
+// => new Date("2017-01-24")
 ```
 
 

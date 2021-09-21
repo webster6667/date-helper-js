@@ -61,7 +61,7 @@ const getDayOfMonthNumber = (date: Date): number => {
  * @description
  * Return Date by day of month number for selected date
  *
- * @param {Date} date
+ * @param {Date} monthDate
  * @param {Date} dayOfMontNumber
  * @returns {Date}
  *
@@ -79,15 +79,19 @@ const getDateByDayOfMonthNumber = (monthDate: Date, dayOfMontNumber: number):Dat
  * @description
  * Return next month Date of selected date
  *
- * @param {Date} date
+ * @param {Date} date - start date
+ * @param {number} step - how many steps forward
  * @returns {Date}
  *
  * @example
  * getNextMonth(new Date("2017-01-26"))
  * // => new Date("2017-02-26")
+ *
+ * getNextMonth(new Date("2017-01-26"), 2)
+ * // => new Date("2017-03-26")
  */
-const getNextMonth = (date: Date):Date => {
-    const nextMonth = new Date(date).setMonth(date.getMonth() + 1)
+const getNextMonth = (date: Date, step:number = 1):Date => {
+    const nextMonth = new Date(date).setMonth(date.getMonth() + step)
     return new Date(nextMonth)
 }
 
@@ -95,15 +99,60 @@ const getNextMonth = (date: Date):Date => {
  * @description
  * Return prev month Date of selected date
  *
- * @param {Date} date
+ * @param {Date} date - start date
+ * @param {number} step - how many steps back
  * @returns {Date}
  *
  * @example
  * getPrevMonth(new Date("2017-02-26"))
  * // => new Date("2017-01-26")
+ *
+ * getPrevMonth(new Date("2017-03-26"), 2)
+ * // => new Date("2017-01-26")
  */
-const getPrevMonth = (date: Date):Date => {
-    const prevMonth = new Date(date).setMonth(date.getMonth() - 1)
+const getPrevMonth = (date: Date, step:number = 1):Date => {
+    const prevMonth = new Date(date).setMonth(date.getMonth() - step)
+    return new Date(prevMonth)
+}
+
+
+/**
+ * @description
+ * Return next day Date of selected date
+ *
+ * @param {Date} date - start date
+ * @param {number} step - how many steps forward
+ * @returns {Date}
+ *
+ * @example
+ * getNextDay(new Date("2017-01-26"))
+ * // => new Date("2017-02-27")
+ *
+ * getNextDay(new Date("2017-01-26"), 2)
+ * // => new Date("2017-03-28")
+ */
+const getNextDay = (date: Date, step:number = 1):Date => {
+    const nextMonth = new Date(date).setDate(date.getDate() + step)
+    return new Date(nextMonth)
+}
+
+/**
+ * @description
+ * Return prev day Date of selected date
+ *
+ * @param {Date} date - start date
+ * @param {number} step - how many steps back
+ * @returns {Date}
+ *
+ * @example
+ * getPrevDay(new Date("2017-02-26"))
+ * // => new Date("2017-01-25")
+ *
+ * getPrevDay(new Date("2017-03-26"), 2)
+ * // => new Date("2017-01-24")
+ */
+const getPrevDay = (date: Date, step:number = 1):Date => {
+    const prevMonth = new Date(date).setDate(date.getDate() - step)
     return new Date(prevMonth)
 }
 
@@ -175,6 +224,8 @@ export {
     getDateByDayOfMonthNumber,
     getNextMonth,
     getPrevMonth,
+    getNextDay,
+    getPrevDay,
     getFirstDateOfMonth,
     getLastDateOfMonth,
     isDatesEqual

@@ -1,6 +1,6 @@
 {
   "name": "date-helper-js",
-  "version": "1.0.5",
+  "version": "1.1.5",
   "description": "Helper functions for working with date",
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
@@ -38,11 +38,11 @@
     "@babel/preset-typescript": "^7.13.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^19.0.0",
-    "@types/jest": "26.0.20",
+    "@types/jest": "^27.0.2",
     "camel-to-dash": "^1.0.7",
     "cross-env": "^7.0.3",
     "husky": "4.3.8",
-    "jest": "26.6.3",
+    "jest": "^27.0.3",
     "jsdoc-babel": "0.5.0",
     "jsdoc-to-markdown": "6.0.1",
     "npm-run-all": "^4.1.5",
@@ -52,6 +52,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^27.0.2",
     "typescript": "^4.2.4"
   },
   "dependencies": {

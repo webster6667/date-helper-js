@@ -12,6 +12,7 @@
 
     "declaration": true,
     "emitDeclarationOnly": true,
+    "esModuleInterop": true,
 
     "sourceMap": true,
 
